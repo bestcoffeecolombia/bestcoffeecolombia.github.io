@@ -1,6 +1,5 @@
 * {
 	margin: 0;
-	padding: 0;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -22,9 +21,16 @@ body {
 /*** Header ****/
 header {
 	width: 100%;
-	background: url('../img/bg.jpg') #281a0c;
+	background: url('../img/cafe_background.jpg') #281a0c;
 	background-attachment: fixed;
 	background-position: center 0;
+	background-size: cover;
+}
+
+header .color-fondo {
+	width: 100%;
+	position: relative;
+	background-color: #281a0c69;
 }
 
 header .contenedor {
@@ -61,7 +67,10 @@ header .textos {
 
 header .textos .nombre {
 	font-size: 50px;
-	font-weight: 600;	
+	font-weight: 600;
+	display: inline;
+	padding: 2px 5px;
+	background: green;	
 }
 
 header .textos .nombre span {
@@ -166,7 +175,8 @@ main .menu .platillo {
 main .menu .nombre {
 	font-size: 20px;
 	margin-bottom: 15px;
-	float: left;
+	text-align: center;
+	font-weight: 500;
 }
 
 main .menu .precio {
@@ -176,9 +186,45 @@ main .menu .precio {
 }
 
 main .menu .descripcion {
+	text-align: center;
 	font-size: 16px;
 	color: #676767;
 	clear: both;
+}
+
+main .menu .producto img {
+	margin-top: 20px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+	width: 50%;
+}
+
+
+.beneficios {
+	margin: 100px 0; /* vertica horizontal*/
+}
+
+section .contenedor h3.titulo {
+	font-size: 40px;
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.beneficios article .title {
+	margin: 1rem;
+	font-weight: bold;
+	font-style: oblique;
+	color: maroon;
+}
+
+.beneficios article p {
+	margin: 1rem;
+	text-align: justify;
+	line-height: 30px;
+	font-weight: 300;
 }
 
 /* -------- Galería -------*/
@@ -260,15 +306,87 @@ main .mapa iframe {
 
 
 /*------- Footer ---------*/
-footer {
+/* footer {
 	background-color: #281a0c;
-}
+} */
 
 footer .copyright {
 	text-align: center;
-	padding: 15px 0;
-	color: #fff;
+	padding: 25px 0;
+	color: #000;
 }
+
+/* The overlay effect with black background */
+.overlay {
+	height: 100%;
+	width: 100%;
+	display: none;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0, 0.9); /* Black with a little bit see-through */
+  }
+  
+  /* The content */
+  .overlay-content {
+	position: relative;
+	width: auto;
+	text-align: center;
+	margin: auto;
+  }
+
+  .overlay-content img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 50%;
+	width: 50%;
+  }
+  
+  /* Close button */
+  .overlay .closebtn {
+	position: absolute;
+	top: 20px;
+	right: 45px;
+	font-size: 60px;
+	cursor: pointer;
+	color: white;
+  }
+  
+  .overlay .closebtn:hover {
+	color: #ccc;
+  }
+  
+  /* Style the search field */
+  .overlay input[type=text] {
+	padding: 15px;
+	font-size: 17px;
+	border: none;
+	float: left;
+	width: 80%;
+	background: white;
+  }
+  
+  .overlay input[type=text]:hover {
+	background: #f1f1f1;
+  }
+  
+  /* Style the submit button */
+  .overlay button {
+	float: left;
+	width: 20%;
+	padding: 15px;
+	background: #ddd;
+	font-size: 17px;
+	border: none;
+	cursor: pointer;
+  }
+  
+  .overlay button:hover {
+	background: #bbb;
+  }
 
 /**** --------- Media queries *******/
 @media screen and (max-width: 800px){

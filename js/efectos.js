@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 		$(this).animate({
 			top: '0px'
-		}, 2000 + (index*500));
+		}, 300 + (index*500));
 	});
 
 	/* Efecto header */
@@ -27,6 +27,7 @@ $(document).ready(function(){
 	/** -- Scroll elementos menú -- **/
 	var acercaDe = $('#acerca-de').offset().top;
 	var menu = $('#platillos').offset().top;
+	var beneficios = $('#beneficios').offset().top;
 	var galeria = $('#galeria').offset().top;
 	var ubicacion = $('#ubicacion').offset().top;
 
@@ -41,21 +42,28 @@ $(document).ready(function(){
 		e.preventDefault();
 		$('html, body').animate({
 			scrollTop: menu + 550
-		}, 500);
+		}, 1000);
+	});
+
+	$('#btn-beneficios').on('click', function(e){
+		e.preventDefault();
+		$('html, body').animate({
+			scrollTop: beneficios
+		}, 1000);
 	});
 
 	$('#btn-galeria').on('click', function(e){
 		e.preventDefault();
 		$('html, body').animate({
 			scrollTop: galeria
-		}, 500);
+		}, 1000);
 	});
 
 	$('#btn-ubicacion').on('click', function(e){
 		e.preventDefault();
 		$('html, body').animate({
 			scrollTop: ubicacion
-		}, 500);
+		}, 1000);
 	});
 
 
